@@ -1,15 +1,13 @@
-<h1>Restaurants</h1>
 
-<% @restaurants.each do |restaurant| %>
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2>
-       <%= link_to restaurant.name, restaurant_path(restaurant) %>
-      </h2>
-      <p><%= restaurant.category %></p>
-      <p><%= restaurant.address %></p>
-      <p><%= restaurant.phone_number %></p>
-    </div>
+
+<div class="container mt-6">
+  <h1>Restaurants</h1>
+   <%= link_to new_restaurant_path do %>
+      <h2 class="btn-primary">Add New Restauarant</h2>
+    <% end %>
+  <div class='cards'>
+    <% @restaurants.each do |restaurant| %>
+      <%= render 'restaurants/card', restaurant: restaurant %>
+    <% end %>
   </div>
-<% end %>
+</div>
