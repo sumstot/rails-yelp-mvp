@@ -1,0 +1,10 @@
+
+<div class="card-product">
+  <img src="http://source.unsplash.com/featured/?#{restaurant.category.downcase}&#{rand(1000)}/800x333"/>
+  <div class="card-product-infos">
+    <h2><%= link_to restaurant.name, restaurant_path(restaurant), style: 'color: gray;text-decoration:none;' %></h2>
+    <p><%= restaurant.category%></p>
+    <p><%= restaurant.address %></p>
+    <p>Phone Number: <%= restaurant.phone_number %></p>
+  </div>
+</div>

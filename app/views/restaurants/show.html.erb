@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <%= link_to '<- Back', '/restaurants', class: 'btn btn-light' %>
+  <div class="card-products">
+    <%= image_tag "https://loremflickr.com/320/240/#{@restaurant.category}food" %>
+    <h2><%= @restaurant.name %></h2>
+    <p><%= @restaurant.category %></p>
+    <p><%= @restaurant.address %></p>
+    <p><%= @restaurant.phone_number %></p>
+    <%= link_to "Add Review", new_restaurant_review_path(@restaurant) %>
+  </div>
+</div>
